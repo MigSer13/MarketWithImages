@@ -61,13 +61,15 @@ insert into products (title, price, category_id, url)
 values ('Milk', 95, 1, 'https://clipart4school.com/wp-content/uploads/2018/03/free-milk-clipart-color-preview.jpg'),
        ('Bread', 28, 1, 'https://ic.pics.livejournal.com/irina_co/66663678/7981661/7981661_original.jpg'),
        ('Cheese', 420, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614578272_25-p-sir-na-belom-fone-36.png'),
-       ('Cheese2', 420, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614578272_25-p-sir-na-belom-fone-36.png'),
-       ('Cheese3', 420, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614578272_25-p-sir-na-belom-fone-36.png'),
-       ('Cheese4', 420, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614578272_25-p-sir-na-belom-fone-36.png'),
-       ('Cheese5', 420, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614578272_25-p-sir-na-belom-fone-36.png'),
-       ('Cheese6', 420, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614578272_25-p-sir-na-belom-fone-36.png'),
-       ('Cheese7', 420, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614578272_25-p-sir-na-belom-fone-36.png'),
-       ('Cheese8', 420, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614578272_25-p-sir-na-belom-fone-36.png');
+       ('Apple', 90, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614553939_1-p-kartinka-yabloka-na-belom-fone-1.jpg'),
+       ('Pear', 100, 1, 'https://a.d-cd.net/nIAAAgAhjOA-960.jpg'),
+       ('Loaf', 40, 1, 'https://static.tildacdn.com/tild6535-3030-4866-b564-313761373561/Group204.png'),
+       ('Milk', 95, 1, 'https://clipart4school.com/wp-content/uploads/2018/03/free-milk-clipart-color-preview.jpg'),
+       ('Bread2', 28, 1, 'https://ic.pics.livejournal.com/irina_co/66663678/7981661/7981661_original.jpg'),
+       ('Apple2', 90, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614553939_1-p-kartinka-yabloka-na-belom-fone-1.jpg'),
+       ('Pear2', 100, 1, 'https://a.d-cd.net/nIAAAgAhjOA-960.jpg'),
+       ('Loaf2', 40, 1, 'https://static.tildacdn.com/tild6535-3030-4866-b564-313761373561/Group204.png'),
+       ('Cheese2', 420, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614578272_25-p-sir-na-belom-fone-36.png');
 
 create table orders
 (

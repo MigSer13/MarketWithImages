@@ -26,6 +26,7 @@ public class Product {
     @Column(name = "url")
     private String url;
 
+
     @Column(name = "price")
     private BigDecimal price;
 
