@@ -8,6 +8,7 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.MultiValueMap;
+import org.springframework.validation.BindingResult;
 import ru.geekbrains.summer.market.model.Product;
 import ru.geekbrains.summer.market.repositories.ProductRepository;
 import ru.geekbrains.summer.market.repositories.specifications.ProductSpecifications;
@@ -73,6 +74,7 @@ public class ProductService {
             String title = params.getFirst(FILTER_TITLE);
             spec = spec.and(ProductSpecifications.titleLike(title));
         }
+
         return spec;
     }
 }

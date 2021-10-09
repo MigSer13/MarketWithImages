@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import ru.geekbrains.summer.market.utils.Status;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -21,6 +22,10 @@ public class Order {
     @Column(name = "id")
     private Long id;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status")
+    private Status status;
+
     @OneToMany(mappedBy = "order")
     @Cascade(org.hibernate.annotations.CascadeType.ALL)
     private List<OrderItem> items;
@@ -28,15 +33,18 @@ public class Order {
     @Column(name = "price")
     private BigDecimal price;
 
+    @Column(name = "address_id")
+    private Address address;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
-    @Column(name = "address")
-    private String address;
-
-    @Column(name = "phone")
-    private String phone;
+//    @Column(name = "address")
+//    private String address;
+//
+//    @Column(name = "phone")
+//    private String phone;
 
     @CreationTimestamp
     @Column(name = "created_at")

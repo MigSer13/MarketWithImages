@@ -76,10 +76,24 @@ create table orders
     id         bigserial primary key,
     price      numeric(8, 2) not null,
     user_id    bigint references users (id),
-    address    varchar(255),
-    phone      varchar(32),
+    address_id    bigint references address (id),
+    status    varchar(50),
+--    address    varchar(255),
+--    phone      varchar(32),
     created_at timestamp default current_timestamp,
     updated_at timestamp default current_timestamp
+);
+
+create table addresses
+(
+    id         bigserial primary key,
+    firstName    varchar(32),
+    lastName    varchar(32),
+    city    varchar(40),
+    country    varchar(2),
+    address1    varchar(100),
+    address2    varchar(100),
+    phone    varchar(50)
 );
 
 create table order_items
