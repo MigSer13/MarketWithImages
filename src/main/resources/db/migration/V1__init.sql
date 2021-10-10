@@ -61,24 +61,42 @@ insert into products (title, price, category_id, url)
 values ('Milk', 95, 1, 'https://clipart4school.com/wp-content/uploads/2018/03/free-milk-clipart-color-preview.jpg'),
        ('Bread', 28, 1, 'https://ic.pics.livejournal.com/irina_co/66663678/7981661/7981661_original.jpg'),
        ('Cheese', 420, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614578272_25-p-sir-na-belom-fone-36.png'),
-       ('Cheese2', 420, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614578272_25-p-sir-na-belom-fone-36.png'),
-       ('Cheese3', 420, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614578272_25-p-sir-na-belom-fone-36.png'),
-       ('Cheese4', 420, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614578272_25-p-sir-na-belom-fone-36.png'),
-       ('Cheese5', 420, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614578272_25-p-sir-na-belom-fone-36.png'),
-       ('Cheese6', 420, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614578272_25-p-sir-na-belom-fone-36.png'),
-       ('Cheese7', 420, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614578272_25-p-sir-na-belom-fone-36.png'),
-       ('Cheese8', 420, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614578272_25-p-sir-na-belom-fone-36.png');
+       ('Apple', 90, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614553939_1-p-kartinka-yabloka-na-belom-fone-1.jpg'),
+       ('Pear', 100, 1, 'https://a.d-cd.net/nIAAAgAhjOA-960.jpg'),
+       ('Loaf', 40, 1, 'https://static.tildacdn.com/tild6535-3030-4866-b564-313761373561/Group204.png'),
+       ('Milk', 95, 1, 'https://clipart4school.com/wp-content/uploads/2018/03/free-milk-clipart-color-preview.jpg'),
+       ('Bread2', 28, 1, 'https://ic.pics.livejournal.com/irina_co/66663678/7981661/7981661_original.jpg'),
+       ('Apple2', 90, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614553939_1-p-kartinka-yabloka-na-belom-fone-1.jpg'),
+       ('Pear2', 100, 1, 'https://a.d-cd.net/nIAAAgAhjOA-960.jpg'),
+       ('Loaf2', 40, 1, 'https://static.tildacdn.com/tild6535-3030-4866-b564-313761373561/Group204.png'),
+       ('Cheese2', 420, 1, 'https://catherineasquithgallery.com/uploads/posts/2021-03/1614578272_25-p-sir-na-belom-fone-36.png');
+
+create table addresses
+(
+    id         bigserial primary key,
+    firstName    varchar(32),
+    lastName    varchar(32),
+    city    varchar(40),
+    country    varchar(2),
+    address1    varchar(100),
+    address2    varchar(100),
+    phone    varchar(50)
+);
 
 create table orders
 (
     id         bigserial primary key,
     price      numeric(8, 2) not null,
     user_id    bigint references users (id),
-    address    varchar(255),
-    phone      varchar(32),
+    address_id    bigint references addresses (id),
+    status    varchar(50),
+--    address    varchar(255),
+--    phone      varchar(32),
     created_at timestamp default current_timestamp,
     updated_at timestamp default current_timestamp
 );
+
+
 
 create table order_items
 (

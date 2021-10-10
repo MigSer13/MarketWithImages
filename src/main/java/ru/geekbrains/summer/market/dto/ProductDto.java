@@ -21,5 +21,6 @@ public class ProductDto {
         this.categoryTitle = product.getCategory().getTitle();
         this.price = product.getPrice();
         this.url = product.getUrl();
+
     }
 }
