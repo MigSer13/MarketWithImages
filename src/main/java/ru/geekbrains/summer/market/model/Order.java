@@ -33,7 +33,8 @@ public class Order {
     @Column(name = "price")
     private BigDecimal price;
 
-    @Column(name = "address_id")
+    @OneToOne
+    @JoinColumn(name = "address_id")
     private Address address;
 
     @ManyToOne

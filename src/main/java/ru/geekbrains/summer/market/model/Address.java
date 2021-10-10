@@ -19,6 +19,9 @@ public class Address {
 //    @JoinColumn(name = "order_id")
 //    private Order order;
 
+    @OneToOne(mappedBy = "address")
+    private Order order;
+
     @Column(name = "firstName")
     private String firstName;
 
